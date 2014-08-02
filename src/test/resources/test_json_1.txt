@@ -1,0 +1,7 @@
+{
+	"string":"Test",
+	"number":123, 
+	"int_list": [], 
+	"bar_list":[{"bar":0},{"bar":1},{"bar":2},{"bar":3},{"bar":4}],
+	"foo_test_list":[{"foo":"foo_0"},{"foo":"foo_1"},{"foo":"foo_2"},{"foo":"foo_3"},{"foo":"foo_4"}]
+}
