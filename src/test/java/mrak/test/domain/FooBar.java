@@ -60,55 +60,5 @@ public class FooBar {
 	public List<Integer> getIntList() {
 		return intList;
 	}
-
-	// equals
-	// ======
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		FooBar other = (FooBar) obj;
-		
-		// FIXME is this case null list and empty list are equal
-		if (barList == null) {
-			if (other.barList != null && other.barList.size() > 0)
-				return false;
-		} else {
-			if(other.barList != null && !other.barList.equals(barList))
-				return false;
-		}
-		
-		if (fooBar == null) {
-			if (other.fooBar != null)
-				return false;
-		} else if (!fooBar.equals(other.fooBar))
-			return false;
-		if (fooList == null) {
-			if (other.fooList != null)
-				return false;
-		} else if (!fooList.equals(other.fooList))
-			return false;
-		if (intList == null) {
-			if (other.intList != null)
-				return false;
-		} else if (!intList.equals(other.intList))
-			return false;
-		if (number == null) {
-			if (other.number != null)
-				return false;
-		} else if (!number.equals(other.number))
-			return false;
-		if (string == null) {
-			if (other.string != null)
-				return false;
-		} else if (!string.equals(other.string))
-			return false;
-		return true;
-	}
 	
 }

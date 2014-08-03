@@ -56,7 +56,7 @@ public class JSONUtil {
 					Object listObj = get(next, listElemType, config);
 					list.add(listObj);
 				}
-
+				
 				setFieldValue(f, instance, list);
 			}
 			else 
@@ -77,7 +77,7 @@ public class JSONUtil {
 		}
 		else {
 			if(conf.throwExceptionOnMissingFieldsInJSON()) {
-				throw new Error("Missing field: " + key);
+				throw new Error("Missing field: " + key + " in " + obj.toString());
 			}
 			else {
 				return null;
@@ -91,7 +91,7 @@ public class JSONUtil {
 		}
 		else {
 			if(conf.throwExceptionOnMissingFieldsInJSON()) {
-				throw new Error("Missing field: " + key);
+				throw new Error("Missing field: " + key + " in " + obj.toString());
 			}
 			else {
 				return null;
