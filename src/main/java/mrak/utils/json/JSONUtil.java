@@ -29,12 +29,12 @@ public class JSONUtil {
 		Field[] fields = target.getDeclaredFields();
 		for(Field f : fields) {
 			
-			if(f.getAnnotation(Ignore.class) != null) {
+			if(f.getAnnotation(JSONIgnore.class) != null) {
 				continue;
 			}
 
 			String jsonFieldName;
-			Name name = f.getAnnotation(Name.class);
+			JSONName name = f.getAnnotation(JSONName.class);
 			if(name != null) {
 				jsonFieldName = name.value();
 			}

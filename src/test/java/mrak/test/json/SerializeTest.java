@@ -29,6 +29,7 @@ public class SerializeTest {
 		FooBar foobar = new FooBar(123, testStringValue, fooList, barList, intList);
 		
 		JSONObject jsonFoobar = new JSONObject(foobar);
+		System.out.println(jsonFoobar.toString());
 		
 		FooBar restoredFoobar = JSONUtil.get(jsonFoobar, FooBar.class, new Config(false, false));
 		

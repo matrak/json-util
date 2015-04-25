@@ -2,21 +2,21 @@ package mrak.test.domain;
 
 import java.util.List;
 
-import mrak.utils.json.Ignore;
-import mrak.utils.json.Name;
+import mrak.utils.json.JSONIgnore;
+import mrak.utils.json.JSONName;
 
 public class FooBar {
 	
 	private Integer number;
 	private String string;
 	
-	@Name("foo_test_list")
+	@JSONName("foo_test_list")
 	private List<Foo> fooList;
 	private List<Bar> barList;
 	
 	private List<Integer> intList;
 	
-	@Ignore
+	@JSONIgnore
 	private String fooBar;
 	
 	// constructors
